@@ -60,10 +60,6 @@ export async function getStaticProps() {
   // const projectIds = projects.results.map((project) => project.id);
   // console.log("project.id", projectIds);
 
-  const projectNames = projects.results.map(
-    (project) => project.properties.Name.title[0]?.plain_text
-  );
-
   return {
     props: { projects }, // will be passed to the page component as props
   };

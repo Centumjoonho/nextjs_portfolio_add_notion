@@ -1,4 +1,3 @@
-// import Image from "next/image";
 import Image from "next/legacy/image";
 
 export default function ProjectItem({ data }) {
@@ -10,9 +9,6 @@ export default function ProjectItem({ data }) {
   const tags = data.properties.Tags.multi_select;
   const start = data.properties.Date.date?.start;
   const end = data.properties.Date.date?.end;
-
-  console.log("start", start);
-  console.log("end", end);
 
   const calPeriod = (start, end) => {
     const startStringArray = start.split("-");
@@ -34,7 +30,6 @@ export default function ProjectItem({ data }) {
     const diffInMs = Math.abs(endDate - startDate);
     const result = diffInMs / (1000 * 60 * 60 * 24);
 
-    console.log(`기간 : ${result}`);
     return result;
   };
   return (
