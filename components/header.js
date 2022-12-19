@@ -37,6 +37,9 @@ export default function Header() {
             >
               <a className="mr-5 hover:text-gray-900">연락하기</a>
             </Link>
+            <Link href="https://hiking-high.netlify.app/" legacyBehavior>
+              <a className="mr-5 hover:text-gray-900">종주중독</a>
+            </Link>
           </nav>
           {/* darkmodetoggleButton */}
           <DMTBtn></DMTBtn>
