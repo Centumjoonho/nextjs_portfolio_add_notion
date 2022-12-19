@@ -15,7 +15,6 @@ export default function Projects({ projects }) {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <h1>
-            Total Projects:
             <span className="pl-4 text-blue-500">
               {/* {projects.results.length} */}
             </span>
