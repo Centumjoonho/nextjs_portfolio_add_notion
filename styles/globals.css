@@ -1,0 +1,47 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.bg-primary {
+  @apply bg-white dark:bg-slate-700;
+}
+.btn-project {
+  @apply inline-flex px-6 py-2 text-lg text-white dark:text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600;
+}
+.project-card {
+  @apply flex flex-col w-full m-3 rounded-xl 
+  transition duration-300 transform border border-gray-300
+  bg-rose-50 dark:bg-slate-700
+  hover:scale-105 hover:shadow-lg
+  hover:shadow-red-200
+  dark:border-gray-200/50
+  dark:hover:shadow-orange-300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-slate-900 dark:text-white;
+}
+
+footer {
+  @apply text-gray-600 dark:text-white  bg-gray-100 dark:bg-slate-400/20;
+}
+
+a {
+  @apply text-slate-500 hover:text-slate-700;
+}
+
+a {
+  @apply dark:text-slate-400 dark:hover:text-slate-50;
+}
+
+p {
+  @apply text-slate-500;
+}
+p {
+  @apply dark:text-slate-400;
+}
