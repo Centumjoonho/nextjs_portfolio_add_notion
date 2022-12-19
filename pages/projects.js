@@ -17,7 +17,7 @@ export default function Projects({ projects }) {
           <h1>
             Total Projects:
             <span className="pl-4 text-blue-500">
-              {projects.results.length}
+              {/* {projects.results.length} */}
             </span>
           </h1>
 
