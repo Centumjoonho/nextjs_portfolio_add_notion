@@ -15,12 +15,12 @@ export default function Header() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                className="w-10 h-10 p-2 text-white bg-indigo-500 rounded-full"
+                className="w-10 h-10 p-2 text-white bg-red-500"
                 viewBox="0 0 24 24"
               >
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
               </svg>
-              <span className="ml-3 text-xl">Centum 준호 Portfolio</span>
+              <span className="ml-3 text-xl">Centum 준호</span>
             </a>
           </Link>
 

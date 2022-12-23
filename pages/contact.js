@@ -4,6 +4,7 @@ import { sendContactForm } from "../lib/api";
 
 import React, { useState } from "react";
 import {
+  Text,
   Button,
   Container,
   FormControl,
@@ -12,16 +13,18 @@ import {
   Heading,
   Input,
   Textarea,
+  useToast,
 } from "@chakra-ui/react";
 
 const intiValue = { name: "", email: "", subject: "", message: "" };
 const initState = { values: intiValue };
 
-export default function Contect() {
+export default function Contact() {
+  const toast = useToast();
   const [state, setState] = useState(initState);
   const [touched, setTouched] = useState({});
 
-  const { values, isLoading } = state;
+  const { values, isLoading, error } = state;
 
   const onBlur = ({ target }) =>
     setTouched((prev) => ({
@@ -40,7 +43,19 @@ export default function Contect() {
 
   const onSubmit = async () => {
     setState((prev) => ({ ...prev, isLoading: true }));
-    await sendContactForm(values);
+    try {
+      await sendContactForm(values);
+      setTouched({});
+      setState(initState);
+      toast({
+        title: "Message sent",
+        status: "success",
+        duration: 2000,
+        position: "top",
+      });
+    } catch (error) {
+      setState((prev) => ({ ...prev, isLoading: false, error: error.message }));
+    }
   };
   return (
     <>
@@ -54,7 +69,11 @@ export default function Contect() {
 
           <Container maxW="450px" mt={12}>
             <Heading>Contact</Heading>
-
+            {error && (
+              <Text color="red.300" my={4} fontSize="xl">
+                {error}
+              </Text>
+            )}
             <FormControl
               isRequired
               isInvalid={touched.name && !values.name}
