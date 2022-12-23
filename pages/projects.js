@@ -2,6 +2,7 @@ import Layout from "../components/layout";
 import Head from "next/head";
 import { TOKEN, DATABASE_ID } from "../config/index";
 import ProjectItem from "../components/projects/project-item";
+import Link from "next/link";
 
 export default function Projects({ projects }) {
   console.log("projects", projects);
@@ -24,6 +25,15 @@ export default function Projects({ projects }) {
             {projects.results.map((aProject) => (
               <ProjectItem key={aProject.id} data={aProject} />
             ))}
+          </div>
+
+          <div className="flex justify-center mt-8">
+            <Link
+              href="https://docs.google.com/spreadsheets/d/1dRQspcl7zcKPdYzWbCLk-AUwc-0Ob_aEot9x-MZW5UU/edit#gid=1709744959"
+              legacyBehavior
+            >
+              <a className="btn-work">My Works</a>
+            </Link>
           </div>
         </div>
       </Layout>
