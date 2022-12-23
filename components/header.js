@@ -26,16 +26,19 @@ export default function Header() {
 
           <nav className="flex flex-wrap items-center justify-center text-base md:ml-auto">
             <Link href="/" legacyBehavior>
-              <a className="mr-5 hover:text-gray-900">홈</a>
+              <a className="mr-5 hover:text-gray-900">H</a>
             </Link>
             <Link href="/projects" legacyBehavior>
-              <a className="mr-5 hover:text-gray-900">프로젝트</a>
+              <a className="mr-5 hover:text-gray-900">P</a>
             </Link>
             <Link
               href="https://smart-factory-lee-joon-ho.tistory.com/"
               legacyBehavior
             >
-              <a className="mr-5 hover:text-gray-900">연락하기</a>
+              <a className="mr-5 hover:text-gray-900">B</a>
+            </Link>
+            <Link href="/contact" legacyBehavior>
+              <a className="mr-5 hover:text-gray-900">C</a>
             </Link>
             <Link href="https://hiking-high.netlify.app/" legacyBehavior>
               <a className="mr-5 hover:text-gray-900">종주중독</a>
