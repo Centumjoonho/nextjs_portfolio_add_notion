@@ -40,7 +40,10 @@ export default function Header() {
             <Link href="/contact" legacyBehavior>
               <a className="mr-5 hover:text-gray-900">C</a>
             </Link>
-            <Link href="https://hiking-high.netlify.app/" legacyBehavior>
+            <Link
+              href="https://hikehigh-deploy-next.vercel.app/"
+              legacyBehavior
+            >
               <a className="mr-5 hover:text-gray-900">종주중독</a>
             </Link>
           </nav>
