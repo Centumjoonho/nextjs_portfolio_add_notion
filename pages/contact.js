@@ -127,7 +127,7 @@ export default function Contact() {
               isInvalid={touched.message && !values.message}
               mb={5}
             >
-              <FormLabel>Messagge</FormLabel>
+              <FormLabel>Message</FormLabel>
               <Textarea
                 type="text"
                 name="message"
