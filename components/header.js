@@ -16,28 +16,29 @@ export default function Header() {
               <a className="mr-5 hover:text-gray-900">H</a>
             </Link>
             <Link href="/projects" legacyBehavior>
-              <a className="mr-5 hover:text-gray-900">P</a>
+              <a className="mr-5 hover:text-gray-900 font-bold text-lg">Projects</a>
             </Link>
             <Link
               href="https://smart-factory-lee-joon-ho.tistory.com/"
               legacyBehavior
             >
-              <a className="mr-5 hover:text-gray-900">Tistory</a>
-            </Link>
-            <Link href="/contact" legacyBehavior>
-              <a className="mr-5 hover:text-gray-900">C</a>
-            </Link>
-            <Link
-              href="https://hikehigh-deploy-next.vercel.app/"
-              legacyBehavior
-            >
-              <a className="mr-5 hover:text-gray-900">종주중독</a>
+              <a className="mr-5 hover:text-gray-900 font-bold text-lg">Tistory</a>
             </Link>
                  <Link
               href="https://centum-community-2baf8b931596.herokuapp.com/"
               legacyBehavior
             >
-              <a className="mr-5 hover:text-gray-900">게시판</a>
+              <a className="mr-5 hover:text-gray-900 font-bold text-lg">게시판</a>
+            </Link>
+                    <Link
+              href="https://hikehigh-deploy-next.vercel.app/"
+              legacyBehavior
+            >
+              <a className="mr-5 hover:text-gray-900 font-bold text-lg">사진첩</a>
+            </Link>
+
+                  <Link href="/contact" legacyBehavior>
+             <a className="mr-5 hover:text-gray-900 font-bold text-lg">Contacts</a>
             </Link>
                 
           </nav>
