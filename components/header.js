@@ -13,7 +13,7 @@ export default function Header() {
 
           <nav className="flex flex-wrap items-center justify-center text-base md:ml-auto">
             <Link href="/" legacyBehavior>
-              <a className="mr-5 hover:text-gray-900">Home</a>
+              <a className="mr-5 hover:text-gray-900 font-bold text-lg">Home</a>
             </Link>
             <Link href="/projects" legacyBehavior>
               <a className="mr-5 hover:text-gray-900 font-bold text-lg">프로젝트</a>
@@ -38,7 +38,7 @@ export default function Header() {
             </Link>
 
             <Link href="/contact" legacyBehavior>
-             <a className="mr-5 hover:text-gray-900 font-bold text-lg">Contacts</a>
+             <a className="mr-5 hover:text-gray-900 font-bold text-lg">CONTACT</a>
             </Link>
                 
           </nav>
