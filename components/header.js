@@ -13,16 +13,16 @@ export default function Header() {
 
           <nav className="flex flex-wrap items-center justify-center text-base md:ml-auto">
             <Link href="/" legacyBehavior>
-              <a className="mr-5 hover:text-gray-900">H</a>
+              <a className="mr-5 hover:text-gray-900">Home</a>
             </Link>
             <Link href="/projects" legacyBehavior>
-              <a className="mr-5 hover:text-gray-900 font-bold text-lg">Projects</a>
+              <a className="mr-5 hover:text-gray-900 font-bold text-lg">프로젝트</a>
             </Link>
             <Link
               href="https://smart-factory-lee-joon-ho.tistory.com/"
               legacyBehavior
             >
-              <a className="mr-5 hover:text-gray-900 font-bold text-lg">Tistory</a>
+              <a className="mr-5 hover:text-gray-900 font-bold text-lg">티스토리</a>
             </Link>
                  <Link
               href="https://centum-community-2baf8b931596.herokuapp.com/"
@@ -37,7 +37,7 @@ export default function Header() {
               <a className="mr-5 hover:text-gray-900 font-bold text-lg">사진첩</a>
             </Link>
 
-                  <Link href="/contact" legacyBehavior>
+            <Link href="/contact" legacyBehavior>
              <a className="mr-5 hover:text-gray-900 font-bold text-lg">Contacts</a>
             </Link>
                 
