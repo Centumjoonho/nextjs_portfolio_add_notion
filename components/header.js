@@ -22,7 +22,7 @@ export default function Header() {
               href="https://smart-factory-lee-joon-ho.tistory.com/"
               legacyBehavior
             >
-              <a className="mr-5 hover:text-gray-900">B</a>
+              <a className="mr-5 hover:text-gray-900">Tistory</a>
             </Link>
             <Link href="/contact" legacyBehavior>
               <a className="mr-5 hover:text-gray-900">C</a>
@@ -33,6 +33,13 @@ export default function Header() {
             >
               <a className="mr-5 hover:text-gray-900">종주중독</a>
             </Link>
+                 <Link
+              href="https://centum-community-2baf8b931596.herokuapp.com/"
+              legacyBehavior
+            >
+              <a className="mr-5 hover:text-gray-900">게시판</a>
+            </Link>
+                
           </nav>
           {/* darkmodetoggleButton */}
           <DMTBtn></DMTBtn>
