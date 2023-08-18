@@ -4,8 +4,19 @@ import DMTBtn from "./dark-m-t-btn";
 export default function Header() {
   return (
     <>
+      <style jsx>
+        {`
+          @media (max-width: 520px) {
+            .header-links {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+          }
+        `}
+      </style>
       <header className="text-gray-600 body-font">
-        <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
+        <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row max-w-xl " >
           <Link href="/" legacyBehavior>
             <a className="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0">
               <span className="ml-3 text-xl">Centum 준호</span>
@@ -24,13 +35,13 @@ export default function Header() {
             >
               <a className="mr-5 hover:text-gray-900 font-bold text-lg">티스토리</a>
             </Link>
-                 <Link
+            <Link
               href="https://centum-community-2baf8b931596.herokuapp.com/"
               legacyBehavior
             >
               <a className="mr-5 hover:text-gray-900 font-bold text-lg">게시판</a>
             </Link>
-                    <Link
+            <Link
               href="https://hikehigh-deploy-next.vercel.app/"
               legacyBehavior
             >
@@ -38,9 +49,9 @@ export default function Header() {
             </Link>
 
             <Link href="/contact" legacyBehavior>
-             <a className="mr-5 hover:text-gray-900 font-bold text-lg">CONTACT</a>
+              <a className="mr-5 hover:text-gray-900 font-bold text-lg">CONTACT</a>
             </Link>
-                
+
           </nav>
           {/* darkmodetoggleButton */}
           <DMTBtn></DMTBtn>
