@@ -4,19 +4,9 @@ import DMTBtn from "./dark-m-t-btn";
 export default function Header() {
   return (
     <>
-      <style jsx>
-        {`
-          @media (max-width: 520px) {
-            .header-links {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            }
-          }
-        `}
-      </style>
+
       <header className="text-gray-600 body-font">
-        <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row max-w-xl " >
+        <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row" >
           <Link href="/" legacyBehavior>
             <a className="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0">
               <span className="ml-3 text-xl">Centum 준호</span>
