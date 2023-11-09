@@ -4,6 +4,7 @@ export default function ProjectItem({ data }) {
   const Title = data.properties.Name.title[0]?.plain_text;
   const GitHub = data.properties.GitHub.url;
   const Blog = data.properties.Blog.url;
+  const URL = data.properties.URL.url;
   const Description = data.properties.Description.rich_text[0]?.plain_text;
   const ImageSrc = data.cover.file?.url || data.cover.external.url;
   const tags = data.properties.Tags.multi_select;
@@ -47,11 +48,15 @@ export default function ProjectItem({ data }) {
       <div className="flex flex-col w-full p-2">
         <h1 className="text-2xl font-bold ">{Title}</h1>
         <h3 className="mt-4 text-xl">{Description}</h3>
-        <a href={GitHub}>GitHub check</a>
-        <a href={Blog}>센텀준호 Blog </a>
-        <p className="my-1">
-          {start}~{end} ( {calPeriod(start, end)} ) 일
-        </p>
+        <div className="my-2 text-base font-bold">
+          <a href={GitHub}>개발 GitHub URL</a>
+          <a href={Blog}>개발 문서 Click</a>
+          <a href={URL}>개발 완성 웹사이트 Click</a>
+          <p className="my-1">
+            {start}~{end} ( {calPeriod(start, end)} ) 일
+          </p>
+
+        </div>
 
         <div className="flex items-start mt-2">
           {tags.map((aTag) => (
