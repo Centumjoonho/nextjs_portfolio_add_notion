@@ -49,9 +49,9 @@ export default function ProjectItem({ data }) {
         <h1 className="text-2xl font-bold ">{Title}</h1>
         <h3 className="mt-4 text-xl">{Description}</h3>
         <div className="my-2 text-base font-bold flex flex-col">
-          <a href={GitHub}>GitHub URL : {GitHub}</a>
-          <a href={Blog}>개발 문서 : {Blog}</a>
-          <a href={URL}>개발 완성 웹사이트 : {URL}</a>
+          <a href={GitHub}>GitHub     {GitHub}</a>
+          <a href={Blog}>개발 문서     {Blog}</a>
+          <a href={URL}>웹사이트     {URL}</a>
           <p className="my-2">
             {start}~{end} ( {calPeriod(start, end)} ) 일
           </p>
