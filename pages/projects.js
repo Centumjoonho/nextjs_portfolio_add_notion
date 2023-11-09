@@ -29,10 +29,10 @@ export default function Projects({ projects }) {
 
           <div className="flex justify-center mt-8">
             <Link
-              href="https://docs.google.com/spreadsheets/d/1dRQspcl7zcKPdYzWbCLk-AUwc-0Ob_aEot9x-MZW5UU/edit#gid=1709744959"
+              href="https://www.notion.so/60b43c369042414096f6aeb958ce9f4b?v=0ff15aed82f745848010cced97bdd437&pvs=4"
               legacyBehavior
             >
-              <a className="btn-work">My Works</a>
+              <a className="btn-work">준호의 NOTION</a>
             </Link>
           </div>
         </div>
