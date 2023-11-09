@@ -38,8 +38,8 @@ export default function Header() {
               <a className="mr-5 hover:text-gray-900 font-bold text-lg">사진첩</a>
             </Link>
 
-            <Link href="/contact" legacyBehavior>
-              <a className="mr-5 hover:text-gray-900 font-bold text-lg">CONTACT</a>
+           <Link href="https://next-joon-todo-deploy.vercel.app/todos" legacyBehavior>
+              <a className="mr-5 hover:text-gray-900 font-bold text-lg">TODOS</a>
             </Link>
 
           </nav>
