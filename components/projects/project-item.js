@@ -48,8 +48,8 @@ export default function ProjectItem({ data }) {
       <div className="flex flex-col w-full p-2">
         <h1 className="text-2xl font-bold ">{Title}</h1>
         <h3 className="mt-4 text-xl">{Description}</h3>
-        <div className="my-2 text-base font-bold">
-          <a href={GitHub}>개발 GitHub URL</a>
+        <div className="my-2 text-base font-bold flex flex-col">
+          <a href={GitHub}>GitHub URL Click</a>
           <a href={Blog}>개발 문서 Click</a>
           <a href={URL}>개발 완성 웹사이트 Click</a>
           <p className="my-1">
