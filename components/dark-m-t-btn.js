@@ -4,7 +4,7 @@ export default function DMTBtn() {
   return (
     <>
       <button
-        className="inline-flex items-center px-3 py-1 mt-4 text-base border-0 rounded bg-sky-100 focus:outline-none hover:bg-sky-200 md:mt-0 hover:text-orange-500 dark:bg-slate-600 dark:hover:text-yellow-300 dark:text-slate-400 dark:hover:bg-slate-800"
+        className="inline-flex items-center px-3 py-1 ml-5 mt-4 text-base border-0 rounded bg-sky-100 focus:outline-none hover:bg-sky-200 md:mt-0 hover:text-orange-500 dark:bg-slate-600 dark:hover:text-yellow-300 dark:text-slate-400 dark:hover:bg-slate-800"
         type="button"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
