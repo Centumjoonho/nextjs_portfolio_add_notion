@@ -6,7 +6,7 @@ export default function Hero() {
     <>
       <div className="flex flex-col items-center mb-16 lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 text-left mx-auto px-4">
         <h1 className="mb-4 text-3xl font-medium text-gray-900 title-font sm:text-4xl">
-          2024년<br />이준호
+          2024년 이준호
         </h1>
 
         <p className="mb-14 text-3xl">기술연구소 BackEnd 개발자 </p>

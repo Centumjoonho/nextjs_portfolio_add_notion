@@ -42,34 +42,32 @@ export default function Skill() {
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-4">Projects</h2>
           <div className="mb-6">
-            <h3 className="text-xl font-semibold mb-2">기상정보지원체계(2년/6명) Front-End [PL]</h3>
+            <h3 className="text-xl font-semibold mb-2">KISA 지능형 CCTV 평가도구 고도화 (6개월/3명) [PL]</h3>
             <p className="text-lg mb-2">
-              기간 : 2021.01~2021.02 / 링크 : <a href="https://github.com/wnghdcjfe/IUtoon" className="text-blue-500 underline">https://github.com/wnghdcjfe/IUtoon</a>
+              기간 : 2021.06~2021.12 / 링크 : <a href="https://github.com/Centumjoonho/cctv" className="text-blue-500 underline">https://github.com/Centumjoonho/cctv</a>
             </p>
             <p className="text-lg mb-2">
-              전투기, 항공기가 이착륙 전 습도, 온도, 풍속 등 기상상황을 실시간으로 보는 체계
+              지능형 CCTV 영상 시험도구 평가 방식 개선 및 산물 데이터셋 제작도구 개발
             </p>
             <ul className="list-disc list-inside text-lg">
-              <li>코드리팩토링, 함수형 프로그래밍화, REST API 구축</li>
-              <li>바람장미, 차트, 지도, 테이블 시각화 컴포넌트제작</li>
-              <li>서버요청최소화 세그먼트기법적용(67% 이상 성능향상)</li>
-              <li>HA에 따른 A & B 파일 / DB 부분적 동기화</li>
-              <li>단방향 시리얼 통신모듈 개발</li>
-              <li>관리자페이지 구축(업로드 / 입력 / 실시간자료, 로그조회)</li>
-              <li>빌드 커스터마이징화 및 실시간 센서연동 및 표출</li>
+              <li>이동형 CCTV 촬영 방식을 위한 IoU 계산 방식 적용</li>
+              <li>3D 영상 제작도구 Blender 에드온 형식 Script 개발</li>
+              <li>연기 및 화염 제작을 위한 최적 Blender 파라메터 세팅</li>
+              <li>사용자 편의성 반영 시험도구 UI 개선 </li>
+              <li>매주 수요일 협력사 집중 회의 진행 </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-2">기상정보지원체계(2년/6명) Back-End</h3>
+            <h3 className="text-xl font-semibold mb-2">전기차 QR 충전 앱 개발 (1년/5명) 메인 지도 화면 Full Stack</h3>
             <p className="text-lg mb-2">
               기간 : 2019.01~2020.02 / 링크 : <a href="https://www.naver.com/" className="text-blue-500 underline">https://www.naver.com/</a>
             </p>
             <p className="text-lg mb-2">
-              전투기, 항공기가 이착륙 전 습도, 온도, 풍속 등 기상상황을 실시간으로 보는 체계
+              환경부 공공데이터 API  + Naver 지도 API + Kakao 검색 API로 인근지역 , 검색지역 전기차 충전소 조회
             </p>
             <ul className="list-disc list-inside text-lg">
-              <li>코드리팩토링, 함수형 프로그래밍화, REST API 구축</li>
-              <li>바람장미, 차트, 지도, 테이블 시각화 컴포넌트제작</li>
+              <li>환경부 전기차 충전소 공공 데이터 API 호출 , REST API 구축</li>
+              <li>환경부 전기차 충전소 공공 데이터 데이터베이스 동기화 처리</li>
               <li>서버요청최소화 세그먼트기법적용(67% 이상 성능향상)</li>
             </ul>
           </div>
