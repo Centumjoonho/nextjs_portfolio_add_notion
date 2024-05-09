@@ -50,25 +50,69 @@ export default function Skill() {
               지능형 CCTV 영상 시험도구 평가 방식 개선 및 산물 데이터셋 제작도구 개발
             </p>
             <ul className="list-disc list-inside text-lg">
-              <li>이동형 CCTV 촬영 방식을 위한 IoU 계산 방식 적용</li>
+              <li>이동형 CCTV 촬영 방식을 위한 SA 미탐지 프레임 Avg IoU 계산 방식 적용</li>
               <li>3D 영상 제작도구 Blender 에드온 형식 Script 개발</li>
               <li>연기 및 화염 제작을 위한 최적 Blender 파라메터 세팅</li>
+              <li>Blender Script 자동화를 통한 300개 다른 산불 영상 제작</li>
               <li>사용자 편의성 반영 시험도구 UI 개선 </li>
               <li>매주 수요일 협력사 집중 회의 진행 </li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">전기차 QR 충전 앱 개발 (1년/5명) 메인 지도 화면 Full Stack</h3>
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold mb-2">전기차 QR 충전 앱 개발 (1년/5명) 메인 지도 화면 Full Stack (미출시)</h3>
             <p className="text-lg mb-2">
-              기간 : 2019.01~2020.02 / 링크 : <a href="https://www.naver.com/" className="text-blue-500 underline">https://www.naver.com/</a>
+              기간 : 2023.05~2023.11 / 링크 : <a href="https://www.figma.com/file/aNXpU6rdIM0oqaQoJQr5MB/%EC%A0%84%EA%B8%B0%EC%B0%A8-%EC%B6%A9%EC%A0%84-%EC%84%9C%EB%B9%84%EC%8A%A4-%ED%94%8C%EB%9E%AB%ED%8F%BC-%EC%95%B1-%ED%99%94%EB%A9%B4-%EA%B8%B0%ED%9A%8D?type=design&node-id=0%3A1&mode=design&t=KAxXLh6wYu6Fm9kH-1" className="text-blue-500 underline">https://www.figma.com/EVapp</a>
             </p>
             <p className="text-lg mb-2">
               환경부 공공데이터 API  + Naver 지도 API + Kakao 검색 API로 인근지역 , 검색지역 전기차 충전소 조회
             </p>
             <ul className="list-disc list-inside text-lg">
               <li>환경부 전기차 충전소 공공 데이터 API 호출 , REST API 구축</li>
-              <li>환경부 전기차 충전소 공공 데이터 데이터베이스 동기화 처리</li>
-              <li>서버요청최소화 세그먼트기법적용(67% 이상 성능향상)</li>
+              <li>환경부 전기차 충전소 공공 데이터 와 로컬 데이터베이스 동기화 처리</li>
+              <li>사용자 편의성 기반 조건 검색 , 지역 검색 알고리즘 개발 </li>
+              <li>법정동 OpenAPI 활용하여 GPS 기반 지역구 , 시 단위 인근 충전소 정보 제공 코드 개발</li>
+              <li>서버 요청 최소화 세그먼트기법적용(67% 이상 성능향상)</li>
+            </ul>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold mb-2">한국장애인개발원 SM 업무</h3>
+            <p className="text-lg mb-2">
+              기간 : 2022.11 ~ 진행중
+            </p>
+            <p className="text-lg mb-2">
+              대표홈페이지 : <a href="https://www.koddi.or.kr/" className="text-blue-500 underline">https://www.koddi.or.kr/</a><br />
+              Universal Design : <a href="https://www.koddi.or.kr/ud" className="text-blue-500 underline">https://www.koddi.or.kr/ud</a><br />
+              인천전략기금 : <a href="https://mrr.koddi.or.kr/page/index_kor.jsp" className="text-blue-500 underline">https://mrr.koddi.or.kr</a><br />
+            </p>
+            <p className="text-lg mb-2">
+              한국장애인개발원 부서별 웹사이트 유지보수 및 고도화 작업
+            </p>
+            <ul className="list-disc list-inside text-lg">
+              <li>한국장애인개발원 서버 마이그레이션 작업 총괄</li>
+              <li>대표홈페이지 사보웹진 운영 시스템 개발</li>
+              <li>대표홈페이지 사보웹진 사용자 접속 통계 페이지 개발</li>
+              <li>Universal Design 교육 접수 신청 페이지 및 관리자 페이지 고도화</li>
+              <li>한국장애인개발원 웹 서버 관리 및 웹접근성 인증 관리</li>
+            </ul>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold mb-2">가천대학교 장애인용 스마트재활기기 고도화 프로젝트</h3>
+            <p className="text-lg mb-2">
+              기간 : 2023.11~ 진행중
+            </p>
+            <p className="text-lg mb-2">
+              관리 서버 링크 : <a href="https://github.com/Centumjoonho/smart-sangji-system" className="text-blue-500 underline">https://github.com/Centumjoonho/smart-sangji-system</a><br />
+              사용자 앱 링크 : <a href="https://github.com/Centumjoonho/sangji-user-application" className="text-blue-500 underline">https://github.com/Centumjoonho/sangji-user-application</a><br />
+            </p>
+            <p className="text-lg mb-2">
+              한국장애인개발원 부서별 웹사이트 유지보수 및 고도화 작업
+            </p>
+            <ul className="list-disc list-inside text-lg">
+              <li>사용자 앱(React Native 기반) 앱 에러 최적화 </li>
+              <li> Django 서버 RestAPI 추가 개발 앱 연동 CRUD 구축 완료 </li>
+              <li> 사용자 인체 피사체 크기 분석 및 최대 피사체 트레킹 코드 개발 ( 미디어 파이프 활용 ) </li>
             </ul>
           </div>
         </div>
