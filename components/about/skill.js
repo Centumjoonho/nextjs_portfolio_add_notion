@@ -98,7 +98,7 @@ export default function Skill() {
           </div>
 
           <div className="mb-6">
-            <h3 className="text-xl font-semibold mb-2">가천대학교 장애인용 스마트재활기기 고도화 프로젝트</h3>
+            <h3 className="text-xl font-semibold mb-2">가천대학교 장애인용 스마트재활기기 프로젝트(8개월/4명)</h3>
             <p className="text-lg mb-2">
               기간 : 2023.11~ 진행중
             </p>
@@ -107,7 +107,7 @@ export default function Skill() {
               사용자 앱 링크 : <a href="https://github.com/Centumjoonho/sangji-user-application" className="text-blue-500 underline">https://github.com/Centumjoonho/sangji-user-application</a><br />
             </p>
             <p className="text-lg mb-2">
-              한국장애인개발원 부서별 웹사이트 유지보수 및 고도화 작업
+              스마트재활기기 안드로이드 앱 , 장고 서버 , 사용자 ReactNative 앱 고도화 ( 상지 , 하지) 고도화 및 상용화 작업
             </p>
             <ul className="list-disc list-inside text-lg">
               <li>사용자 앱(React Native 기반) 앱 에러 최적화 </li>
@@ -117,16 +117,33 @@ export default function Skill() {
           </div>
         </div>
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Award</h2>
+          <h2 className="text-2xl font-bold mb-4">education</h2>
           <div>
-            <h3 className="text-xl font-semibold mb-2">국방부 표창장</h3>
-            <p className="text-lg">19.04.11 / 국방정보본부장상★★★ / 육군(국방부)</p>
+            <h3 className="text-xl font-semibold mb-2">한국품질재단 스마트팩토리 SW양성과정</h3>
+
+            <ul className="list-disc list-inside text-lg mb-4">
+              <li>C#, HTML5, PHP/JSP, 데이터베이스, 라즈베리파이, MES, HMI, SE,
+                (이론 480h, 프로젝트 실습 480h)
+              </li>
+
+
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-2">부산벤처기업협회</h3>
+            <ul className="list-disc list-inside text-lg">
+              <li>스마트 시티 생활/복지 인공지능 솔루션 (48H)</li>
+              <li>Orange3 Data Mining Tools 설치 및 기본사용법</li>
+              <li>구글 Colab 환경에서 CNN, DNN을 이용한 기상에 따른 유동 인구 예측</li>
+              <li>시각데이터(이미지, 영상)를 활용한 딥러닝 분석 실습</li>
+              <li>스마트 생활/복지에 적용할 수 있는 생성 AI</li>
+            </ul>
           </div>
         </div>
         <div>
           <h2 className="text-2xl font-bold mb-4">Community</h2>
           <div>
-            <h3 className="text-xl font-semibold mb-2">큰돌의 터전 스터디 / 19.04 ~</h3>
+            <h3 className="text-2xl font-semibold mb-3">AI CLUB / 23.02 ~</h3>
             <p className="text-lg">매주마다 자연어처리 기술에 대한 최신논문을 읽고 코드 구현 등을 기반으로 스터디를 진행함</p>
           </div>
         </div>

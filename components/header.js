@@ -31,7 +31,10 @@ export default function Header() {
             <Link href="/projects" legacyBehavior>
               <a className="mr-5 text-xl font-bold hover:text-blue-600">프로젝트</a>
             </Link>
-            <Link href="https://smart-factory-lee-joon-ho.tistory.com/" legacyBehavior>
+            {/* <Link href="https://smart-factory-lee-joon-ho.tistory.com/" legacyBehavior>
+              <a className="mr-5 text-xl font-bold hover:text-blue-600">기술블로그</a>
+            </Link> */}
+            <Link href="/blog" legacyBehavior>
               <a className="mr-5 text-xl font-bold hover:text-blue-600">기술블로그</a>
             </Link>
             <Link href="https://centum-community-2baf8b931596.herokuapp.com/" legacyBehavior>
