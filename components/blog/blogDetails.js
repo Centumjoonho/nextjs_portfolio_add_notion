@@ -23,7 +23,7 @@ export default function BlogDetails() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">기술 블로그 Hot Contents</h1>
-      <div className="bg-white shadow-md rounded-lg overflow-hidden">
+      <div className="bg-white shadow-md rounded-lg overflow-hidden mb-10">
         <table className="w-full table-fixed">
           <thead className="bg-gray-100">
             <tr>
