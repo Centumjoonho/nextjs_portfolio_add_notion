@@ -23,13 +23,13 @@ export default function Header() {
               } lg:block`}
           >
             <Link href="/" legacyBehavior>
-              <a className="mr-5 text-xl font-bold hover:text-blue-600">Home</a>
+              <a className="mr-5 text-xl font-bold hover:text-blue-600">HOME</a>
             </Link>
             <Link href="/about" legacyBehavior>
-              <a className="mr-5 text-xl font-bold hover:text-blue-600">About</a>
+              <a className="mr-5 text-xl font-bold hover:text-blue-600">ABOUT</a>
             </Link>
             <Link href="/projects" legacyBehavior>
-              <a className="mr-5 text-xl font-bold hover:text-blue-600">프로젝트</a>
+              <a className="mr-5 text-xl font-bold hover:text-blue-600">STUDY</a>
             </Link>
             {/* <Link href="https://smart-factory-lee-joon-ho.tistory.com/" legacyBehavior>
               <a className="mr-5 text-xl font-bold hover:text-blue-600">기술블로그</a>
@@ -38,11 +38,11 @@ export default function Header() {
               <a className="mr-5 text-xl font-bold hover:text-blue-600">기술블로그</a>
             </Link>
             <Link href="https://centum-community-2baf8b931596.herokuapp.com/" legacyBehavior>
-              <a className="mr-5 text-xl font-bold hover:text-blue-600">게시판</a>
+              <a className="mr-5 text-xl font-bold hover:text-blue-600">개인블로그</a>
             </Link>
-            <Link href="https://hikehigh-deploy-next.vercel.app/" legacyBehavior>
-              <a className="mr-5 text-xl font-bold hover:text-blue-600">사진첩</a>
-            </Link>
+            {/* <Link href="https://hikehigh-deploy-next.vercel.app/" legacyBehavior>
+              <a className="mr-5 text-xl font-bold hover:text-blue-600">ALBUM</a>
+            </Link> */}
             <Link href="https://next-joon-todo-deploy.vercel.app/todos" legacyBehavior>
               <a className="text-xl font-bold hover:text-blue-600">TODOS</a>
             </Link>
