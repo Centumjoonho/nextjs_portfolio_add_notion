@@ -24,11 +24,12 @@ export default function Skill() {
           <h2 className="text-2xl font-bold mb-4">Skills</h2>
           <div className="mb-4">
             <h3 className="text-xl font-semibold mb-2">Strong</h3>
-            <p className="text-lg"> FrontEnd : JavaScript/ JQuery/ React.js /Java / Spring / MySQL / MSSQL </p>
-            <p className="text-lg"> BackEnd : Java / Spring / MySQL / MSSQL </p>
+            <p className="text-lg"> FrontEnd : JavaScript / JQuery / React.js / Next.js </p>
+            <p className="text-lg"> BackEnd : Java - Spring / Node.js </p>
             <p className="text-lg"> DBMS : MySQL / MSSQL </p>
             <p className="text-lg"> Sever : Apache Tomcat</p>
             <p className="text-lg"> Tools :  Eclipse - 전자정부프레임워크 / Visual Studio Code</p>
+            <p className="text-lg"> App-Dev :  React-Native </p>
           </div>
           <div className="mb-4">
             <h3 className="text-xl font-semibold mb-2">Knowledgeable</h3>
@@ -117,7 +118,7 @@ export default function Skill() {
           </div>
         </div>
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">education</h2>
+          <h2 className="text-2xl font-bold mb-4">Education</h2>
           <div>
             <h3 className="text-xl font-semibold mb-2">한국품질재단 스마트팩토리 SW양성과정</h3>
 
