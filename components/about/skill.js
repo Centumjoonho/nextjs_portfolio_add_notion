@@ -148,7 +148,13 @@ export default function Skill() {
             <p className="text-lg">매주마다 자연어처리 기술에 대한 최신논문을 읽고 코드 구현 등을 기반으로 스터디를 진행함</p>
           </div>
         </div>
+        <div className="flex justify-center md:justify-start mt-10">
+          <Link href="/blog" className="btn-project">
+            기술블로그 알아보기
+          </Link>
+        </div>
       </div>
+
       {/* <div className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">
         <Anime></Anime>
       </div> */}

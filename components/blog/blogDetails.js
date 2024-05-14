@@ -23,64 +23,45 @@ export default function BlogDetails() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">기술 블로그 Hot Contents</h1>
-      <div className="bg-white shadow-md rounded-lg overflow-hidden mb-10">
-        <table className="w-full table-fixed">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="w-1/12 px-4 py-2">번호</th>
-              <th className="w-6/12 px-4 py-2">제목</th>
-              <th className="w-2/12 px-4 py-2">작성자</th>
-              <th className="w-2/12 px-4 py-2">작성일</th>
-              <th className="w-1/12 px-4 py-2">조회수</th>
-            </tr>
-          </thead>
-          <tbody>
-            {blogPosts.map((post, index) => (
-              <tr key={post.id} className="border-b hover:bg-gray-50">
-                <td className="px-4 py-2 text-center">{index + 1}</td>
-                <td className="px-4 py-2">
-                  <Link href={post.url} target="_blank" legacyBehavior>
-                    <a className="text-blue-500 hover:underline">{post.title}</a>
-                  </Link>
-                </td>
-                <td className="px-4 py-2 text-center">{post.author}</td>
-                <td className="px-4 py-2 text-center">{post.date}</td>
-                <td className="px-4 py-2 text-center">{post.views}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {blogPosts.map((post) => (
+          <div key={post.id} className="project-card">
+            <Link href={post.url} target="_blank" legacyBehavior>
+              <a className="block p-4">
+                <h2 className="text-xl font-bold mb-2">{post.title}</h2>
+                <div className="text-gray-500 mb-2">
+                  <span className="mr-4">{post.author}</span>
+                  <span>{post.date}</span>
+                </div>
+                <div className="text-gray-500">조회수: {post.views}</div>
+              </a>
+            </Link>
+          </div>
+        ))}
       </div>
-      <h1 className="text-3xl font-bold mb-8">R&D Report</h1>
-      <div className="bg-white shadow-md rounded-lg overflow-hidden">
-        <table className="w-full table-fixed">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="w-1/12 px-4 py-2">번호</th>
-              <th className="w-6/12 px-4 py-2">제목</th>
-              <th className="w-2/12 px-4 py-2">작성자</th>
-              <th className="w-2/12 px-4 py-2">작성일</th>
-              <th className="w-1/12 px-4 py-2">조회수</th>
-            </tr>
-          </thead>
-          <tbody>
-            {RnDPosts.map((post, index) => (
-              <tr key={post.id} className="border-b hover:bg-gray-50">
-                <td className="px-4 py-2 text-center">{index + 1}</td>
-                <td className="px-4 py-2">
-                  <Link href={post.url} target="_blank" legacyBehavior>
-                    <a className="text-blue-500 hover:underline">{post.title}</a>
-                  </Link>
-                </td>
-                <td className="px-4 py-2 text-center">{post.author}</td>
-                <td className="px-4 py-2 text-center">{post.date}</td>
-                <td className="px-4 py-2 text-center">{post.views}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+
+      <h1 className="text-3xl font-bold my-8">R&D Report</h1>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {RnDPosts.map((post) => (
+          <div key={post.id} className="project-card">
+            <Link href={post.url} target="_blank" legacyBehavior>
+              <a className="block p-4">
+                <h2 className="text-xl font-bold mb-2">{post.title}</h2>
+                <div className="text-gray-500 mb-2">
+                  <span className="mr-4">{post.author}</span>
+                  <span>{post.date}</span>
+                </div>
+                <div className="text-gray-500">조회수: {post.views}</div>
+              </a>
+            </Link>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center md:justify-start mt-10">
+        <Link href="/about" className="btn-project">
+          센텀준호 블로그 이동
+        </Link>
       </div>
     </div>
-
   );
 }

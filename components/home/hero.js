@@ -1,5 +1,6 @@
 import Anime from "./anime";
 import Link from "next/link";
+import About from './../../pages/about';
 
 export default function Hero() {
   return (
@@ -19,8 +20,8 @@ export default function Hero() {
             <p className="mb-2">🚀 업무 일정을 정확하게 소화하는 추진능력</p>
           </div>
           <div className="flex justify-center md:justify-start">
-            <Link href="/projects" className="btn-project">
-              더 알아보기!
+            <Link href="/about" className="btn-project">
+              경력 알아보기
             </Link>
           </div>
         </div>
