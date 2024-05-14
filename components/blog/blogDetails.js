@@ -58,7 +58,7 @@ export default function BlogDetails() {
         ))}
       </div>
       <div className="flex justify-center md:justify-start mt-10">
-        <Link href="/about" className="btn-project">
+        <Link href="https://smart-factory-lee-joon-ho.tistory.com" className="btn-project">
           센텀준호 블로그 이동
         </Link>
       </div>
