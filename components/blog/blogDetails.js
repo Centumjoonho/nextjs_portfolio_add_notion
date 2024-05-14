@@ -22,7 +22,7 @@ export default function BlogDetails() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">기술 블로그 Hot Contents</h1>
+      <h1 className="text-3xl font-bold mb-8"> Hot Contents</h1>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {blogPosts.map((post) => (
           <div key={post.id} className="project-card">
