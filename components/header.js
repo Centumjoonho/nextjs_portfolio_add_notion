@@ -12,41 +12,12 @@ export default function Header() {
   return (
     <>
       <header className="text-gray-600 body-font bg-gray-100">
-        <div className="container flex flex-wrap items-center justify-between p-5 mx-auto lg:flex-row">
+        <div className="container flex flex-wrap items-center justify-between p-4 mx-auto">
           <Link href="/" legacyBehavior>
-            <a className="flex items-center mb-4 font-medium text-gray-900 title-font lg:mb-0">
-              <span className="ml-3 text-3xl font-bold">Centum 준호</span>
+            <a className="flex items-center mb-2 font-medium text-gray-900 title-font lg:mb-0">
+              <span className="ml-3 text-2xl font-bold">Centum 준호</span>
             </a>
           </Link>
-          <nav
-            className={`lg:ml-auto lg:flex flex-wrap items-center text-base justify-center ${isOpen ? "block" : "hidden"
-              } lg:block`}
-          >
-            <Link href="/" legacyBehavior>
-              <a className="mr-5 text-xl font-bold hover:text-blue-600">HOME</a>
-            </Link>
-            <Link href="/about" legacyBehavior>
-              <a className="mr-5 text-xl font-bold hover:text-blue-600">ABOUT</a>
-            </Link>
-            <Link href="/projects" legacyBehavior>
-              <a className="mr-5 text-xl font-bold hover:text-blue-600">STUDY</a>
-            </Link>
-            {/* <Link href="https://smart-factory-lee-joon-ho.tistory.com/" legacyBehavior>
-              <a className="mr-5 text-xl font-bold hover:text-blue-600">기술블로그</a>
-            </Link> */}
-            <Link href="/blog" legacyBehavior>
-              <a className="mr-5 text-xl font-bold hover:text-blue-600">기술블로그</a>
-            </Link>
-            <Link href="https://centum-community-2baf8b931596.herokuapp.com/" legacyBehavior>
-              <a className="mr-5 text-xl font-bold hover:text-blue-600">개인블로그</a>
-            </Link>
-            {/* <Link href="https://hikehigh-deploy-next.vercel.app/" legacyBehavior>
-              <a className="mr-5 text-xl font-bold hover:text-blue-600">ALBUM</a>
-            </Link> */}
-            <Link href="https://next-joon-todo-deploy.vercel.app/todos" legacyBehavior>
-              <a className="text-xl font-bold hover:text-blue-600">TODOS</a>
-            </Link>
-          </nav>
           <button
             className="inline-flex items-center p-2 ml-3 text-sm text-gray-700 rounded-lg lg:hidden hover:bg-gray-400 ring-2 ring-gray-400 dark:text-gray-200 dark:ring-gray-200"
             onClick={toggleMenu}
@@ -77,6 +48,43 @@ export default function Header() {
               ></path>
             </svg>
           </button>
+          <nav
+            className={`${isOpen ? "block" : "hidden"
+              } lg:flex lg:items-center lg:w-auto w-full`}
+          >
+            <div className="lg:flex-grow">
+              <Link href="/" legacyBehavior>
+                <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
+                  HOME
+                </a>
+              </Link>
+              <Link href="/about" legacyBehavior>
+                <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
+                  ABOUT
+                </a>
+              </Link>
+              <Link href="/projects" legacyBehavior>
+                <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
+                  STUDY
+                </a>
+              </Link>
+              <Link href="/blog" legacyBehavior>
+                <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
+                  기술블로그
+                </a>
+              </Link>
+              <Link href="https://centum-community-2baf8b931596.herokuapp.com/" legacyBehavior>
+                <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
+                  개인블로그
+                </a>
+              </Link>
+              <Link href="https://next-joon-todo-deploy.vercel.app/todos" legacyBehavior>
+                <a className="block mt-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
+                  TODOS
+                </a>
+              </Link>
+            </div>
+          </nav>
           <DMTBtn></DMTBtn>
         </div>
       </header>
