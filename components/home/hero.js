@@ -19,12 +19,12 @@ export default function Hero() {
             <p className="mb-0.5">💬 정확한 소통을 통한 빠른 업무처리 능력</p>
             <p className="mb-2">🚀 업무 일정을 정확하게 소화하는 추진능력</p>
           </div>
-          <div className="flex justify-center md:justify-start">
+          <div className="flex justify-center md:justify-start mb-2">
             <Link href="/about" className="btn-project">
               경력 알아보기
             </Link>
           </div>
-          <div className="flex justify-center md:justify-start mt:5px">
+          <div className="flex justify-center md:justify-start">
             <Link href="https://richidea-16a42.web.app/" className="btn-project">
               AI 아이디어 생성기
             </Link>
