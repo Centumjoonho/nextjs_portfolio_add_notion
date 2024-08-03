@@ -20,6 +20,11 @@ export default function Hero() {
             <p className="mb-2">🚀 업무 일정을 정확하게 소화하는 추진능력</p>
           </div>
           <div className="flex justify-center md:justify-start mb-2">
+            <Link href="https://diaryjoonho.web.app/" className="btn-project">
+              업무 기록
+            </Link>
+          </div>
+          <div className="flex justify-center md:justify-start mb-2">
             <Link href="/about" className="btn-project">
               경력 알아보기
             </Link>
@@ -29,11 +34,7 @@ export default function Hero() {
               AI 아이디어 생성기
             </Link>
           </div>
-         <div className="flex justify-center md:justify-start mb-2">
-            <Link href="https://diaryjoonho.web.app/" className="btn-project">
-              업무 기록
-            </Link>
-          </div>
+         
         </div>
         <div className="w-5/6 md:w-1/2">
           <Anime></Anime>
