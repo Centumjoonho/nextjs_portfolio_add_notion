@@ -24,7 +24,7 @@ export default function Hero() {
               경력 알아보기
             </Link>
           </div>
-    <div className="flex justify-center md:justify-start">
+          <div className="flex justify-center md:justify-start mt:5px">
             <Link href="https://richidea-16a42.web.app/" className="btn-project">
               AI 아이디어 생성기
             </Link>
