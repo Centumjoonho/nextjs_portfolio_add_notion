@@ -19,28 +19,28 @@ export default function Hero() {
             <p className="mb-0.5">💬 정확한 소통을 통한 빠른 업무처리 능력</p>
             <p className="mb-2">🚀 업무 일정을 정확하게 소화하는 추진능력</p>
           </div>
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col items-center md:items-start space-y-3">
             <Link 
               href="https://diaryjoonho.web.app/" 
-              className="inline-block px-6 py-3 text-base font-medium text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-blue-200 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+              className="w-1/2 px-6 py-3 text-base font-medium text-gray-700 bg-blue-200 rounded-lg shadow-md hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-blue-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
             >
               업무 기록
             </Link>
             <Link 
               href="/about" 
-              className="inline-block px-6 py-3 text-base font-medium text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-green-200 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+              className="w-1/2 px-6 py-3 text-base font-medium text-gray-700 bg-green-200 rounded-lg shadow-md hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 focus:ring-offset-green-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
             >
               경력 알아보기
             </Link>
             <Link 
               href="https://richidea-16a42.web.app/" 
-              className="inline-block px-6 py-3 text-base font-medium text-white bg-purple-600 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+              className="w-1/2 px-6 py-3 text-base font-medium text-gray-700 bg-purple-200 rounded-lg shadow-md hover:bg-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-purple-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
             >
               AI 아이디어 생성기
             </Link>
             <Link 
               href="https://llamaaitest.web.app/" 
-              className="inline-block px-6 py-3 text-base font-medium text-white bg-red-600 rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-200 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+              className="w-1/2 px-6 py-3 text-base font-medium text-gray-700 bg-red-200 rounded-lg shadow-md hover:bg-red-300 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-offset-2 focus:ring-offset-red-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
             >
               Meta Llama WebBuilder
             </Link>
