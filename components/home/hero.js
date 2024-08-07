@@ -34,6 +34,11 @@ export default function Hero() {
               AI 아이디어 생성기
             </Link>
           </div>
+    <div className="flex justify-center md:justify-start mb-2">
+            <Link href="https://llamaaitest.web.app/" className="btn-project">
+              Meta Llama WebBuilder
+            </Link>
+          </div>
          
         </div>
         <div className="w-5/6 md:w-1/2">
