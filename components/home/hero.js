@@ -22,25 +22,25 @@ export default function Hero() {
           <div className="flex flex-col items-center md:items-start space-y-3">
             <Link 
               href="https://diaryjoonho.web.app/" 
-              className="w-1/2 px-6 py-3 text-base font-medium text-gray-900 bg-blue-300 rounded-lg shadow-md hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-800 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+              className="w-1/2 px-6 py-3 text-base font-medium text-gray-900 bg-blue-600 rounded-lg shadow-md hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-800 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
             >
               업무 기록
             </Link>
             <Link 
               href="/about" 
-              className="w-1/2 px-6 py-3 text-base font-medium text-gray-900 bg-green-300 rounded-lg shadow-md hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-800 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+              className="w-1/2 px-6 py-3 text-base font-medium text-gray-900 bg-green-600 rounded-lg shadow-md hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-800 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
             >
               경력 알아보기
             </Link>
             <Link 
               href="https://richidea-16a42.web.app/" 
-              className="w-1/2 px-6 py-3 text-base font-medium text-gray-900 bg-purple-300 rounded-lg shadow-md hover:bg-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-gray-800 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+              className="w-1/2 px-6 py-3 text-base font-medium text-gray-900 bg-purple-600 rounded-lg shadow-md hover:bg-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-gray-800 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
             >
               AI 아이디어 생성기
             </Link>
             <Link 
               href="https://llamaaitest.web.app/" 
-              className="w-1/2 px-6 py-3 text-base font-medium text-gray-900 bg-red-300 rounded-lg shadow-md hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 focus:ring-offset-gray-800 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+              className="w-1/2 px-6 py-3 text-base font-medium text-gray-900 bg-red-600 rounded-lg shadow-md hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 focus:ring-offset-gray-800 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
             >
               Meta Llama WebBuilder
             </Link>
