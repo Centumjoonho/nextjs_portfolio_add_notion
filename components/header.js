@@ -73,16 +73,16 @@ export default function Header() {
                   기술블로그
                 </a>
               </Link>
-              <Link href="https://centum-community-2baf8b931596.herokuapp.com/" legacyBehavior>
+              <Link href="https://ai-crypto-gwv3.vercel.app/" legacyBehavior>
                 <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
-                  개인블로그
+                  코인 분석
                 </a>
               </Link>
-              <Link href="https://next-joon-todo-deploy.vercel.app/todos" legacyBehavior>
-                <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
-                  TODOS
-                </a>
-              </Link>
+             // <Link href="https://next-joon-todo-deploy.vercel.app/todos" legacyBehavior>
+               // <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
+                 // TODOS
+                //</a>
+              //</Link>
             <Link href="https://morphic-ai-answer-engine-generative-gkrdunho0.vercel.app/" legacyBehavior>
                 <a className="block mt-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
                   AICHAT
