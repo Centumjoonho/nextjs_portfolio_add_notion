@@ -49,7 +49,7 @@ export default function Hero() {
           </div>
 
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
-            이준호 <span className="text-cyan-600 dark:text-cyan-300">/ Junho Lee</span>
+            이준호 <span className="text-cyan-600 dark:text-cyan-300">/ Joonho Lee</span>
           </h1>
           <p className="mt-2 text-xl text-slate-700 dark:text-white/70">
             IT Specialist · DX Software Engineer

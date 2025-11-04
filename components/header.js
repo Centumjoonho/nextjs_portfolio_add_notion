@@ -1,94 +1,189 @@
+// components/layout/header.js (or ./header.js)
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import DMTBtn from "./dark-m-t-btn";
-import { useState } from "react";
+
+const NAV_ITEMS = [
+  { href: "/", label: "HOME" },
+  { href: "/about", label: "ABOUT" },
+  { href: "/projects", label: "STUDY" },
+  { href: "/blog", label: "기술블로그" },
+  { href: "https://ai-crypto-gwv3.vercel.app/", label: "AI CRYPTO", external: true },
+  { href: "https://morphic-ai-answer-engine-generative-gkrdunho0.vercel.app/", label: "AICHAT", external: true },
+];
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const router = useRouter();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  // 라우트 변경 시 모바일 메뉴 닫기
+  useEffect(() => {
+    setOpen(false);
+  }, [router.pathname]);
+
+  // 현재 경로와 일치하면 활성 스타일
+  const isActive = (href) => {
+    // 외부 링크는 활성 처리 없음
+    if (href.startsWith("http")) return false;
+    // 정확 일치 또는 하위 경로 일치
+    return router.pathname === href || router.pathname.startsWith(href + "/");
   };
 
   return (
-    <>
-      <header className="text-gray-600 body-font bg-gray-100">
-        <div className="container flex flex-wrap items-center justify-between p-4 mx-auto">
-          <Link href="/" legacyBehavior>
-            <a className="flex items-center mb-2 font-medium text-gray-900 title-font lg:mb-0">
-              <span className="ml-3 text-2xl font-bold">Centum 준호</span>
-            </a>
-          </Link>
-          <button
-            className="inline-flex items-center p-2 ml-3 text-sm text-gray-700 rounded-lg lg:hidden hover:bg-gray-400 ring-2 ring-gray-400 dark:text-gray-200 dark:ring-gray-200"
-            onClick={toggleMenu}
+    <header
+      className="
+        sticky top-0 z-50
+        border-b border-slate-200/60 bg-white/70 backdrop-blur-md
+        dark:border-slate-700/60 dark:bg-slate-900/60
+      "
+      role="banner"
+    >
+      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+        {/* Logo */}
+        <Link href="/" className="group inline-flex items-center gap-2">
+          <div
+            className="
+              inline-flex h-9 w-9 items-center justify-center rounded-xl
+              bg-gradient-to-br from-cyan-500 to-indigo-500 text-white font-bold
+              shadow-sm group-hover:opacity-90
+            "
+            aria-hidden
           >
-            <span className="sr-only">Open main menu</span>
+            CJ
+          </div>
+          <span className="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Centum 준호
+          </span>
+          <span className="ml-1 rounded-full border border-slate-300 bg-white/70 px-2 py-0.5 text-[10px] font-semibold text-slate-700 dark:border-white/10 dark:bg-white/10 dark:text-white/80">
+            DX
+          </span>
+        </Link>
+
+        {/* Right side (desktop) */}
+        <div className="hidden items-center gap-1 lg:flex">
+          <nav aria-label="Primary" className="flex items-center gap-1">
+            {NAV_ITEMS.map((item) => (
+              <NavLink key={item.href} {...item} active={isActive(item.href)} />
+            ))}
+          </nav>
+          <div className="ml-2 pl-2">
+            <DMTBtn />
+          </div>
+        </div>
+
+        {/* Mobile toggles */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <DMTBtn />
+          <button
+            onClick={() => setOpen((v) => !v)}
+            aria-controls="mobile-nav"
+            aria-expanded={open}
+            aria-label="메인 메뉴 열기/닫기"
+            className="
+              inline-flex h-10 w-10 items-center justify-center rounded-lg
+              ring-1 ring-slate-300 hover:bg-slate-100
+              dark:ring-slate-600 dark:hover:bg-slate-800
+              focus:outline-none focus:ring-2 focus:ring-cyan-500
+            "
+          >
+            {/* 햄버거/닫기 아이콘 */}
             <svg
-              className={`w-6 h-6 ${isOpen ? "hidden" : "block"}`}
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+              className={`h-5 w-5 ${open ? "hidden" : "block"}`}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
             >
-              <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              ></path>
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
             </svg>
             <svg
-              className={`w-6 h-6 ${isOpen ? "block" : "hidden"}`}
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+              className={`h-5 w-5 ${open ? "block" : "hidden"}`}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
             >
-              <path
-                fillRule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              ></path>
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </button>
-          <nav
-            className={`${isOpen ? "block" : "hidden"
-              } lg:flex lg:items-center lg:w-auto w-full`}
-          >
-            <div className="lg:flex-grow">
-              <Link href="/" legacyBehavior>
-                <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
-                  HOME
-                </a>
-              </Link>
-              <Link href="/about" legacyBehavior>
-                <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
-                  ABOUT
-                </a>
-              </Link>
-              <Link href="/projects" legacyBehavior>
-                <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
-                  STUDY
-                </a>
-              </Link>
-              <Link href="/blog" legacyBehavior>
-                <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
-                  기술블로그
-                </a>
-              </Link>
-              <Link href="https://ai-crypto-gwv3.vercel.app/" legacyBehavior>
-                <a className="block mt-4 mr-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
-                  AI CRYPTO
-                </a>
-              </Link>
-
-              <Link href="https://morphic-ai-answer-engine-generative-gkrdunho0.vercel.app/" legacyBehavior>
-                <a className="block mt-4 text-lg font-bold lg:inline-block lg:mt-0 hover:text-blue-600">
-                  AICHAT
-                </a>
-              </Link>
-            </div>
-          </nav>
-          <DMTBtn></DMTBtn>
         </div>
-      </header>
-    </>
+      </div>
+
+      {/* Mobile menu */}
+      <div
+        id="mobile-nav"
+        className={`
+          lg:hidden
+          overflow-hidden transition-[max-height,opacity] duration-300 ease-out
+          ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+        `}
+      >
+        <nav
+          aria-label="Mobile Primary"
+          className="container mx-auto flex flex-col gap-1 px-4 pb-4 pt-1"
+        >
+          {NAV_ITEMS.map((item) => (
+            <NavLink key={item.href} {...item} active={isActive(item.href)} mobile />
+          ))}
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function NavLink({ href, label, external, active, mobile }) {
+  const base =
+    "relative inline-flex items-center rounded-lg px-3 py-2 text-sm font-semibold transition";
+  const color =
+    "text-slate-700 hover:text-slate-900 hover:bg-slate-100 " +
+    "dark:text-white/80 dark:hover:text-white dark:hover:bg-white/10";
+  const activeCls =
+    active
+      ? "text-slate-900 dark:text-white"
+      : "";
+
+  // 활성 탭 밑줄 그라데이션
+  const underline = active ? (
+    <span
+      aria-hidden
+      className="
+        pointer-events-none absolute inset-x-2 -bottom-0.5 h-0.5 rounded-full
+        bg-gradient-to-r from-cyan-500 via-indigo-500 to-violet-500
+      "
+    />
+  ) : null;
+
+  const props = external
+    ? { href, target: "_blank", rel: "noreferrer" }
+    : { href };
+
+  return (
+    <Link
+      {...props}
+      className={[
+        base,
+        color,
+        activeCls,
+        mobile ? "justify-between ring-1 ring-slate-200/70 dark:ring-slate-700/60" : "",
+      ].join(" ")}
+    >
+      <span>{label}</span>
+      {underline}
+      {external && (
+        <span className="ml-2 text-[10px] text-slate-500 dark:text-white/50" aria-hidden>
+          ↗
+        </span>
+      )}
+    </Link>
   );
 }
