@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 // ⭐ 서버에서는 import 자체를 하지 않도록 동적 임포트 + ssr:false
 const Anime = dynamic(() => import('../components/home/anime'), {
   ssr: false,
-  loading: () => <div style={{height: 240}} />, // 선택: 로딩 자리
+  loading: () => <div style={{ height: 240 }} />, // 선택: 로딩 자리
 });
 
 export default function Home() {
@@ -23,10 +23,10 @@ export default function Home() {
           <Hero />
         </div>
 
-        {/* 🔽 원하는 위치에 애니메이션 추가 */}
+        {/* 🔽 원하는 위치에 애니메이션 추가
         <div className="mt-8">
           <Anime />
-        </div>
+        </div> */}
       </section>
     </Layout>
   );

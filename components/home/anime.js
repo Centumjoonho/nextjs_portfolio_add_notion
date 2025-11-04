@@ -22,7 +22,7 @@ export default function Anime() {
       loop
       play
       path="/animation_llfuvf1m.json"
-      style={{ width: 240, height: 240 }}
+      style={{ width: 500, height: 500 }}
     />
   );
 }
