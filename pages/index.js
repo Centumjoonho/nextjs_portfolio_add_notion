@@ -22,11 +22,6 @@ export default function Home() {
         <div className="container flex flex-col items-center px-5 py-24 mx-auto md:flex-row">
           <Hero />
         </div>
-
-        {/* 🔽 원하는 위치에 애니메이션 추가
-        <div className="mt-8">
-          <Anime />
-        </div> */}
       </section>
     </Layout>
   );
