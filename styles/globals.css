@@ -5,20 +5,23 @@
 .bg-primary {
   @apply bg-white dark:bg-slate-700;
 }
+
 .btn-project {
   @apply inline-flex px-6 py-2 text-lg text-white dark:text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600;
 }
+
 .btn-work {
   @apply inline-flex px-6 py-2 text-lg text-white dark:text-white bg-red-400 border-0 rounded focus:outline-none hover:bg-red-500;
 }
+
 .project-card {
-  @apply flex flex-col w-full m-3 rounded-xl 
-  transition duration-300 transform border border-gray-300
-  bg-rose-50 dark:bg-slate-700
-  hover:scale-105 hover:shadow-lg
-  hover:shadow-red-200
-  dark:border-gray-200/50
-  dark:hover:shadow-orange-300;
+  @apply flex flex-col w-full m-3 rounded-xl transition duration-300 transform border border-gray-300 bg-rose-50 dark:bg-slate-700 hover:scale-105 hover:shadow-lg hover:shadow-red-200 dark:border-gray-200/50 dark:hover:shadow-orange-300;
+}
+
+.bg-grid-slate-800\/20 {
+  background-image: linear-gradient(to right, rgba(30, 41, 59, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 41, 59, 0.2) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 h1,
@@ -28,15 +31,17 @@ h5,
 h6 {
   @apply text-slate-900 dark:text-slate-300;
 }
+
 h2 {
   @apply text-2xl font-bold text-slate-800 dark:text-emerald-400;
 }
 
 footer {
-  @apply text-gray-600 dark:text-white  bg-gray-100 dark:bg-slate-400/20;
+  @apply text-gray-600 dark:text-white bg-gray-100 dark:bg-slate-400/20;
 }
+
 header {
-  @apply text-gray-600 dark:text-white  bg-gray-100 dark:bg-slate-200/20;
+  @apply text-gray-600 dark:text-white bg-gray-100 dark:bg-slate-200/20;
 }
 
 a {
@@ -50,9 +55,11 @@ a {
 p {
   @apply text-slate-500;
 }
+
 p {
   @apply dark:text-slate-400;
 }
+
 ul {
   @apply text-slate-500 dark:text-lime-100;
 }
@@ -60,5 +67,5 @@ ul {
 th {
   @apply dark:bg-emerald-200;
 }
-td {
-}
+
+td {}
