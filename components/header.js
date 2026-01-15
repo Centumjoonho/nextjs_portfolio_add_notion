@@ -10,7 +10,7 @@ const NAV_ITEMS = [
   { href: "/projects", label: "STUDY" },
   { href: "/blog", label: "기술블로그" },
   { href: "https://ai-crypto-gwv3.vercel.app/", label: "AI CRYPTO", external: true },
-  { href: "https://morphic-ai-answer-engine-generative-gkrdunho0.vercel.app/", label: "AICHAT", external: true },
+  { href: "https://anycable-theta.vercel.app/", label: "PRIVATE CHAT", external: true },
 ];
 
 export default function Header() {
