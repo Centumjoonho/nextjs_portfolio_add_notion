@@ -36,7 +36,7 @@ export default function Home() {
               A simple Next.js todo application demo showcasing task management features.
             </p>
             <Link
-              href="https://next-joon-todo-deploy-git-master-centumjoonhos-projects.vercel.app/"
+              href="https://next-joon-todo-deploy.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="
