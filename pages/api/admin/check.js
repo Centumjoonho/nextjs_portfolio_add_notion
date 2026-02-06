@@ -1,4 +1,4 @@
-import { isAdmin } from '../../../lib/auth';
+import { isAdmin, getUserRole } from '../../../lib/auth';
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -6,5 +6,6 @@ export default async function handler(req, res) {
   }
 
   const admin = isAdmin(req);
-  return res.status(200).json({ isAdmin: admin });
+  const role = getUserRole(req);
+  return res.status(200).json({ isAdmin: admin, role: role || null });
 }

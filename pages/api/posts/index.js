@@ -1,5 +1,5 @@
 import { prisma } from '../../../lib/prisma';
-import { isAdmin } from '../../../lib/auth';
+import { isAdmin, isAdminRole } from '../../../lib/auth';
 
 export default async function handler(req, res) {
   if (req.method === 'GET') {
@@ -51,9 +51,9 @@ export default async function handler(req, res) {
   }
 
   if (req.method === 'POST') {
-    // 작성은 관리자만
-    if (!isAdmin(req)) {
-      return res.status(401).json({ error: 'Unauthorized' });
+    // 작성은 ADMIN만 (DEMO는 불가)
+    if (!isAdminRole(req)) {
+      return res.status(403).json({ error: 'Forbidden: Demo accounts cannot create posts' });
     }
 
     try {

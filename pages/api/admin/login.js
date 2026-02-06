@@ -30,8 +30,8 @@ export default async function handler(req, res) {
       return res.status(401).json({ error: 'Invalid username or password' });
     }
 
-    // 세션 토큰 생성 및 쿠키 발급
-    const token = createSessionToken();
+    // 세션 토큰 생성 및 쿠키 발급 (role 포함)
+    const token = createSessionToken(admin.role);
     const cookieHeader = setSessionCookie(token);
 
     res.setHeader('Set-Cookie', cookieHeader);

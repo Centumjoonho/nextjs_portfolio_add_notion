@@ -1,5 +1,5 @@
 import { prisma } from '../../../lib/prisma';
-import { isAdmin } from '../../../lib/auth';
+import { isAdmin, isAdminRole } from '../../../lib/auth';
 
 export default async function handler(req, res) {
   const { slug } = req.query;
@@ -28,9 +28,9 @@ export default async function handler(req, res) {
   }
 
   if (req.method === 'PUT') {
-    // 수정은 관리자만
-    if (!admin) {
-      return res.status(401).json({ error: 'Unauthorized' });
+    // 수정은 ADMIN만 (DEMO는 불가)
+    if (!isAdminRole(req)) {
+      return res.status(403).json({ error: 'Forbidden: Demo accounts cannot edit posts' });
     }
 
     try {
@@ -77,9 +77,9 @@ export default async function handler(req, res) {
   }
 
   if (req.method === 'DELETE') {
-    // 삭제는 관리자만
-    if (!admin) {
-      return res.status(401).json({ error: 'Unauthorized' });
+    // 삭제는 ADMIN만 (DEMO는 불가)
+    if (!isAdminRole(req)) {
+      return res.status(403).json({ error: 'Forbidden: Demo accounts cannot delete posts' });
     }
 
     try {

@@ -8,6 +8,7 @@ export default function AdminLogin() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [demoLoading, setDemoLoading] = useState(false);
   const router = useRouter();
   const { next } = router.query;
 
@@ -47,6 +48,31 @@ export default function AdminLogin() {
       setError('오류가 발생했습니다.');
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleDemoLogin = async () => {
+    setError('');
+    setDemoLoading(true);
+
+    try {
+      const res = await fetch('/api/admin/demo-login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        // 로그인 성공 시 next 파라미터가 있으면 그곳으로, 없으면 기본 경로로
+        router.push(next || '/study/coding-test');
+      } else {
+        setError(data.error || '데모 로그인에 실패했습니다.');
+      }
+    } catch (err) {
+      setError('오류가 발생했습니다.');
+    } finally {
+      setDemoLoading(false);
     }
   };
 
@@ -102,12 +128,37 @@ export default function AdminLogin() {
               )}
               <button
                 type="submit"
-                disabled={loading}
+                disabled={loading || demoLoading}
                 className="w-full rounded-lg bg-gradient-to-r from-cyan-500 to-indigo-500 px-4 py-2 font-semibold text-white transition hover:opacity-90 disabled:opacity-50"
               >
                 {loading ? '로그인 중...' : '로그인'}
               </button>
             </form>
+            
+            <div className="mt-6">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-slate-300 dark:border-slate-600"></div>
+                </div>
+                <div className="relative flex justify-center text-sm">
+                  <span className="bg-white px-2 text-slate-500 dark:bg-slate-800 dark:text-slate-400">
+                    또는
+                  </span>
+                </div>
+              </div>
+              
+              <button
+                type="button"
+                onClick={handleDemoLogin}
+                disabled={loading || demoLoading}
+                className="mt-4 w-full rounded-lg border-2 border-slate-300 bg-white px-4 py-2 font-semibold text-slate-700 transition hover:bg-slate-50 disabled:opacity-50 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
+              >
+                {demoLoading ? '데모 로그인 중...' : '데모로 로그인'}
+              </button>
+              <p className="mt-2 text-center text-xs text-slate-500 dark:text-slate-400">
+                데모 계정으로 게시판을 체험해보세요 (읽기 전용)
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -17,6 +17,7 @@ const NAV_ITEMS = [
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [userRole, setUserRole] = useState(null);
   const router = useRouter();
 
   // 라우트 변경 시 모바일 메뉴 닫기
@@ -28,8 +29,14 @@ export default function Header() {
   useEffect(() => {
     fetch('/api/admin/check')
       .then(res => res.json())
-      .then(data => setIsAdmin(data.isAdmin))
-      .catch(() => setIsAdmin(false));
+      .then(data => {
+        setIsAdmin(data.isAdmin);
+        setUserRole(data.role);
+      })
+      .catch(() => {
+        setIsAdmin(false);
+        setUserRole(null);
+      });
   }, [router.pathname]);
 
   // 현재 경로와 일치하면 활성 스타일
@@ -81,12 +88,13 @@ export default function Header() {
             {isAdmin ? (
               <>
                 <span className="rounded-full bg-cyan-100 px-2 py-1 text-xs font-semibold text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300">
-                  관리자
+                  {userRole === 'DEMO' ? '데모' : '관리자'}
                 </span>
                 <button
                   onClick={async () => {
                     await fetch('/api/admin/logout', { method: 'POST' });
                     setIsAdmin(false);
+                    setUserRole(null);
                     router.push('/');
                   }}
                   className="rounded-lg px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
@@ -95,12 +103,27 @@ export default function Header() {
                 </button>
               </>
             ) : (
-              <Link
-                href="/admin/login"
-                className="rounded-lg px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
-              >
-                로그인
-              </Link>
+              <>
+                <Link
+                  href="/admin/login"
+                  className="rounded-lg px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                >
+                  로그인
+                </Link>
+                <button
+                  onClick={async () => {
+                    const res = await fetch('/api/admin/demo-login', { method: 'POST' });
+                    if (res.ok) {
+                      setIsAdmin(true);
+                      setUserRole('DEMO');
+                      router.push('/study/coding-test');
+                    }
+                  }}
+                  className="rounded-lg px-3 py-1.5 text-xs font-semibold text-indigo-600 transition hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-indigo-900/20"
+                >
+                  데모
+                </button>
+              </>
             )}
             <DMTBtn />
           </div>
@@ -120,12 +143,26 @@ export default function Header() {
               로그아웃
             </button>
           ) : (
-            <Link
-              href="/admin/login"
-              className="rounded-lg px-2 py-1 text-xs font-semibold text-slate-700 transition hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
-            >
-              로그인
-            </Link>
+            <>
+              <Link
+                href="/admin/login"
+                className="rounded-lg px-2 py-1 text-xs font-semibold text-slate-700 transition hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+              >
+                로그인
+              </Link>
+              <button
+                onClick={async () => {
+                  const res = await fetch('/api/admin/demo-login', { method: 'POST' });
+                  if (res.ok) {
+                    setIsAdmin(true);
+                    router.push('/study/coding-test');
+                  }
+                }}
+                className="rounded-lg px-2 py-1 text-xs font-semibold text-indigo-600 transition hover:bg-indigo-50 dark:text-indigo-400 dark:hover:bg-indigo-900/20"
+              >
+                데모
+              </button>
+            </>
           )}
           <DMTBtn />
           <button
@@ -190,7 +227,7 @@ export default function Header() {
           ))}
           {isAdmin && (
             <div className="mt-2 rounded-lg bg-cyan-50 px-3 py-2 text-sm font-semibold text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300">
-              관리자 모드
+              {userRole === 'DEMO' ? '데모 모드' : '관리자 모드'}
             </div>
           )}
         </nav>
