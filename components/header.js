@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { href: "/", label: "HOME" },
   { href: "/about", label: "ABOUT" },
   { href: "/projects", label: "STUDY" },
+  { href: "/study/coding-test", label: "CODING" },
   { href: "/blog", label: "기술블로그" },
   { href: "https://ai-crypto-gwv3.vercel.app/", label: "AI CRYPTO", external: true },
   { href: "https://morphic-ai-answer-engine-generative-gkrdunho0.vercel.app/", label: "AICHAT", external: true },
@@ -15,11 +16,20 @@ const NAV_ITEMS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const router = useRouter();
 
   // 라우트 변경 시 모바일 메뉴 닫기
   useEffect(() => {
     setOpen(false);
+  }, [router.pathname]);
+
+  // 로그인 상태 확인
+  useEffect(() => {
+    fetch('/api/admin/check')
+      .then(res => res.json())
+      .then(data => setIsAdmin(data.isAdmin))
+      .catch(() => setIsAdmin(false));
   }, [router.pathname]);
 
   // 현재 경로와 일치하면 활성 스타일
@@ -67,13 +77,56 @@ export default function Header() {
               <NavLink key={item.href} {...item} active={isActive(item.href)} />
             ))}
           </nav>
-          <div className="ml-2 pl-2">
+          <div className="ml-2 flex items-center gap-2 pl-2">
+            {isAdmin ? (
+              <>
+                <span className="rounded-full bg-cyan-100 px-2 py-1 text-xs font-semibold text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300">
+                  관리자
+                </span>
+                <button
+                  onClick={async () => {
+                    await fetch('/api/admin/logout', { method: 'POST' });
+                    setIsAdmin(false);
+                    router.push('/');
+                  }}
+                  className="rounded-lg px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                >
+                  로그아웃
+                </button>
+              </>
+            ) : (
+              <Link
+                href="/admin/login"
+                className="rounded-lg px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+              >
+                로그인
+              </Link>
+            )}
             <DMTBtn />
           </div>
         </div>
 
         {/* Mobile toggles */}
         <div className="flex items-center gap-2 lg:hidden">
+          {isAdmin ? (
+            <button
+              onClick={async () => {
+                await fetch('/api/admin/logout', { method: 'POST' });
+                setIsAdmin(false);
+                router.push('/');
+              }}
+              className="rounded-lg px-2 py-1 text-xs font-semibold text-slate-700 transition hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+            >
+              로그아웃
+            </button>
+          ) : (
+            <Link
+              href="/admin/login"
+              className="rounded-lg px-2 py-1 text-xs font-semibold text-slate-700 transition hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+            >
+              로그인
+            </Link>
+          )}
           <DMTBtn />
           <button
             onClick={() => setOpen((v) => !v)}
@@ -135,6 +188,11 @@ export default function Header() {
           {NAV_ITEMS.map((item) => (
             <NavLink key={item.href} {...item} active={isActive(item.href)} mobile />
           ))}
+          {isAdmin && (
+            <div className="mt-2 rounded-lg bg-cyan-50 px-3 py-2 text-sm font-semibold text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300">
+              관리자 모드
+            </div>
+          )}
         </nav>
       </div>
     </header>

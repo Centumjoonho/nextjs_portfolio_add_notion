@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+  id               String   @id @default(cuid())
+  title            String
+  slug             String   @unique
+  platform         String   // BOJ, Programmers, LeetCode, etc.
+  problemNo        String?  // 문제 번호 (선택)
+  difficulty       String?  // 난이도 (Bronze, Silver, Gold, Lv1, Lv2, etc.)
+  tags             String[] // 태그 배열
+  summary          String?  @db.Text
+  contentMarkdown  String   @db.Text // 풀이 내용 (마크다운)
+  codeBlock        String?  @db.Text // 코드 블록
+  retrospective    String?  @db.Text // 회고
+  isPublic         Boolean  @default(true)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([slug])
+  @@index([platform])
+  @@index([difficulty])
+  @@index([isPublic, createdAt])
+  @@map("posts")
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  passwordHash String
+  role         String   @default("ADMIN")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([username])
+  @@map("admin_users")
+}

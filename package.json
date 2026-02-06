@@ -6,12 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "seed": "node prisma/seed.js"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.4",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@prisma/client": "^5.7.1",
+    "bcrypt": "^5.1.1",
+    "cookie": "^0.6.0",
     "dotenv": "^16.0.3",
     "framer-motion": "^6.5.1",
     "lucide-react": "^0.552.0",
@@ -20,10 +28,13 @@
     "nodemailer": "^6.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-lottie-player": "^1.5.0"
+    "react-lottie-player": "^1.5.0",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
+    "prisma": "^5.7.1",
     "tailwindcss": "^3.2.4"
   }
 }
